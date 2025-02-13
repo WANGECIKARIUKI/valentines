@@ -1,3 +1,25 @@
+// Select the audio element
+const bgMusic = document.getElementById("bg-music");
+
+// Function to start the music
+function playMusic() {
+    if (bgMusic.paused) {
+        bgMusic.volume = 0.7; // Adjust volume (between 0 and 1)
+        bgMusic.play().catch(error => console.log("Music autoplay blocked:", error));
+    }
+}
+
+// Play music when the user clicks "Next"
+document.getElementById("next-btn").addEventListener("click", () => {
+    playMusic();
+    nextSection();
+});
+
+// Also play when clicking "Yes" or "Yes, please"
+document.querySelectorAll(".valentine-btn").forEach(btn => {
+    btn.addEventListener("click", playMusic);
+});
+
 const sections = [
     { message: "Hey my love ❤️", description: "I have something special to ask you." },
    /* { message: "But first...", description: "You need to know that OLIVE YOU SOOO MUCH 😊" },
