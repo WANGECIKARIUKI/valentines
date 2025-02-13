@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+    <!-- Background music (auto-plays on user interaction) -->
+    <audio id="bg-music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <!-- Dancing animation GIF -->
+        <img src="assets/dancing.gif" alt="Dancing Animation" class="dancing-gif">
+
+        <div class="content">
+            <h2 id="message">Heeeey my love ❤️</h2> <!-- Dynamic heading -->
+            <p id="description">I have a question I want to ask</p> <!-- Dynamic description -->
+        </div>
+        
+        <!-- Navigation buttons -->
+        <div class="buttons">
+            <button id="prev-btn" onclick="prevSection()">Previous</button>
+            <button id="next-btn" onclick="nextSection()">Next</button>
+        </div>
+
+        <!-- Final proposal section (hidden initially) -->
+        <div class="final-options hidden">
+            <h2>Will you be my Valentine?
+            </h2>
+            <button class="valentine-btn" onclick="acceptProposal()">Yes</button>
+            <button class="valentine-btn" onclick="acceptProposal()">Yes, please</button>
+        </div>
+    </div>
+
+    <!-- JavaScript files -->
+    <script src="script.js"></script>  <!-- Handles interactions -->
+    <script src="confetti.js"></script> <!-- Handles confetti effect -->
+</body>
+</html>
